@@ -602,7 +602,7 @@ int main(int argc, char **argv)
 	
 	while (std::getline(fileInput, line))
 	{
-		// cs.updateCacheLRU(line);
+		// cs.updateCacheLRU(line);  // pseudo LRU or LRU cache replacement policy
 		cs.updateCachePseudoLRU(line);
 	}
 	std::cout << "Finished reading file: " << cs.cs_traceFilename << std::endl; //cs_totalInstructions
